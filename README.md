@@ -17,6 +17,9 @@ Since I want to save some money I look to last minute trips that are usually che
 APIs to be used:
 
 Flights: Amadeus https://developers.amadeus.com/
-Weather: open weather API https://openweathermap.org/api 
+Weather: open weather API https://openweathermap.org/api
 
+CSS Frameworks
 
+Foundation: https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css
+Bootstrap: https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
