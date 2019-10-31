@@ -161,6 +161,8 @@ var destinations = {
   }
 };
 
+
+
 $(".callout").on("click", function() {
   var activity = $(this).attr("activity");
   var cities = destinations[activity];
@@ -229,10 +231,25 @@ $(".callout").on("click", function() {
 
           var div = document.createElement("div");
           div.setAttribute("class", "city");
+
           div.setAttribute("city", cityWeather.city);
+          div.setAttribute("id", cityWeather.city);
+  
           container.append(div);
-          var table = document.createElement("table");
+          var table = document.createElement("table")
           table.setAttribute("class", "city-tbl");
+
+
+
+          div.addEventListener("click", function(){
+            document.body.innerHTML = " ";
+            var div = $('<div>');
+            div.attr('class', 'city');
+            div.text(cityWeather.city + ' ' + cityWeather.country);
+            $('body').append(div);
+          });
+          
+
           div.append(table);
           var titleRow = document.createElement("tr");
           titleRow.setAttribute("class", "cityTbl-titleRow");
@@ -246,6 +263,8 @@ $(".callout").on("click", function() {
           var title = document.createElement("h1");
           title.setAttribute("class", "cityTitle-h1");
           title.textContent = cityWeather.city;
+
+
           cityTitle.append(title);
           var flagImg = document.createElement("img");
           flagImg.setAttribute("src", flagUrl);
@@ -308,3 +327,4 @@ $(".callout").on("click", function() {
     }
   }
 });
+
