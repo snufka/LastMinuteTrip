@@ -1,5 +1,6 @@
 body {
     width: 80%;
+    font-family: 'Staatliches', cursive;
 }
 
 footer {
@@ -88,4 +89,13 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.accordion-title {
+    height: 45px;
+    color: blueviolet;
+}
+
+#airplaneIcon {
+    height: 45px;
 }
