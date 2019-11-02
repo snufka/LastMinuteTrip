@@ -161,7 +161,7 @@ var destinations = {
   }
 };
 
-$(".callout").on("click", function() {
+$(".callout").on("click", function () {
   var activity = $(this).attr("activity");
   var cities = destinations[activity];
   document.body.innerHTML = "";
@@ -192,7 +192,7 @@ $(".callout").on("click", function() {
         method: "GET"
       })
         // We store all of the retrieved data inside of an object called "response"
-        .then(function(response) {
+        .then(function (response) {
           var city = response.city.name;
           var country = response.city.country;
           var list = response.list;

@@ -1,37 +1,41 @@
+body {
+    width: 80%;
+}
+
 footer {
     display: flex;
     background: lightgray;
 }
 
-.activity-img{
+.activity-img {
     height: 220;
     width: 100%;
 }
 
-.callout:hover{
+.callout:hover {
     background: lightskyblue;
     cursor: pointer;
 }
 
-.city:hover{
+.city:hover {
     background: lightskyblue;
     cursor: pointer;
 }
 
-.city{
+.city {
     border: darkblue;
     border-style: solid;
     margin: 1.5px;
     width: 230px;
 }
 
-.container{
+.container {
     display: flex;
     margin: auto;
     padding: 0;
 }
 
-.cityTbl-titleRow{
+.cityTbl-titleRow {
     height: 80px;
     display: flex;
     justify-content: space-evenly;
@@ -39,50 +43,49 @@ footer {
     background: darkgray;
 }
 
-.cityTitle-h1{
+.cityTitle-h1 {
     font-size: 15px;
     font: bold;
 }
 
-.cityFlag-td{
+.cityFlag-td {
     width: 70px;
     height: 50px;
 }
 
-.flag{
+.flag {
     flex-shrink: 1;
     height: 100%;
 }
 
-.day-tbl{
+.day-tbl {
     display: flex;
     flex-direction: column;
 }
 
-.dayTitle-h2{
+.dayTitle-h2 {
     font-size: 15px;
-    margin:0;
+    margin: 0;
     text-align: center;
 }
 
-.hour-h3,.temp-h3, .description-h3{
+.hour-h3, .temp-h3, .description-h3 {
     font-size: 10px;
     margin: 2px;
 }
 
-.weather-icon{
+.weather-icon {
     height: 50px;
     width: 50px;
 }
 
-.city-tbl, .day-tbl{
+.city-tbl, .day-tbl {
     width: 100%;
-    margin:0;
+    margin: 0;
 }
 
-.hour-row{
+.hour-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
