@@ -2,7 +2,7 @@ var latitude;
 var longitude;
 var accessToken;
 var airportUrl;
-var departureDate = "2019-11-01"; //User Input OR tomorrow by default (Moment API)?;
+var departureDate = "2019-11-04"; //User Input OR tomorrow by default (Moment API)?;
 var returnDate = "2019-11-05"; //User Input OR tomorrow + x days by default (Moment API)? OPTIONAL;
 
 //first we get the latitude and longitude of the user with getLocation() and showPosition()
@@ -23,8 +23,6 @@ function showPosition(position) {
     latitude +
     "&longitude=" +
     longitude;
-  //Once we have the airportUrl we can call the trip() function  
-  trip();
 }
 
 getLocation();
@@ -63,11 +61,12 @@ function trip() {
         .then(function(data) {
           //In the variable airportIata we store the origin Airport depending on user Position
           var airportIata = data.data[0].iataCode;
-          console.log(airportIata);
           fetch(
             "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=" +
               airportIata +
-              "&destinationLocationCode=MXP&departureDate=" +
+              "&destinationLocationCode=" +
+              destinationCode +
+              "&departureDate=" +
               departureDate +
               "&adults=1&nonStop=false&max=10",
             {
