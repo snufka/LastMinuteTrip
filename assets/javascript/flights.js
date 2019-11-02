@@ -39,10 +39,10 @@ function trip() {
       "grant_type=client_credentials&client_id=0qIbG0i238qRwotHP5ZYaTAoECyjc1Ft&client_secret=FomyiuCA9Pvfiy8H"
   }) /*I use the json() method to access the body (where the token is) of the response, otherwise not directly
   accessible from the response object*/
-    .then(function(response) {
+    .then(function (response) {
       return response.json();
     })
-    .then(function(data) {
+    .then(function (data) {
       /*I save the token value contained in the reponse of the POST request in a variable that I will
       use in the Authorization Header of the GET request*/
       accessToken = data["access_token"];
@@ -55,10 +55,10 @@ function trip() {
           Authorization: "Bearer " + accessToken
         }
       })
-        .then(function(response) {
+        .then(function (response) {
           return response.json();
         })
-        .then(function(data) {
+        .then(function (data) {
           //In the variable airportIata we store the origin Airport depending on user Position
           var airportIata = data.data[0].iataCode;
           fetch(
@@ -78,9 +78,26 @@ function trip() {
                 Authorization: "Bearer " + accessToken
               }
             }
-          ).then(function(response) {
-            return console.log(response.json());
+          ).then(function (response) {
+            return response.json();
+
+          }).then(function (data) {
+            console.log(data);
+            //Marina - VARS for the flights
+            for (var i = 0; i < data.data.length; i++) {
+              var price = data.data[i].price.total;
+              var airLine = data.data[i].validatingAirlineCodes;
+              var departure = data.data[i].itineraries.segments.departure.at;
+            };
           });
         });
     });
+
 }
+// submit - return date on click
+$(".submit").on("click", function () {
+
+  var returnDate = $(".returnDate").val();
+  console.log(returnDate);
+});
+
