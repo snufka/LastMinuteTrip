@@ -163,6 +163,8 @@ var destinations = {
   ]
 };
 
+
+
 $(".callout").on("click", function() {
   activity = $(this).attr("js-activity");
   var cities = destinations[activity];
@@ -297,3 +299,4 @@ $(document).on("click", ".city", function() {
     trip();
   }
 });
+
