@@ -1,5 +1,4 @@
 var destinationCode;
-
 var departureDate = moment();
 var activity;
 var destinations = {
@@ -246,7 +245,7 @@ $(".callout").on("click", function() {
               </tr>
 
             ${Object.keys(cityWeather.day)
-              .map(function(key) {
+              .map(key => {
                 return `
                     <table class="day-Tbl">
                       <tr class="dayTitle-tr">
