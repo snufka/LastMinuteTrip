@@ -101,3 +101,7 @@ $(".submit").on("click", function () {
   console.log(returnDate);
 });
 
+var d = moment(); // data atual
+// ou, se você já tiver um Date, faça:  d = moment(date)
+d.add(1, 'days'); // somar 2 dias
+document.getElementById('newDate').innerHTML = d.format('DD/MM/YYYY'); // formatar a data
