@@ -1,4 +1,5 @@
 var destinationCode;
+var departureDate = moment();
 var activity;
 var destinations = {
   beach: [
@@ -163,15 +164,11 @@ var destinations = {
   ]
 };
 
-<<<<<<< HEAD
-$(".callout").on("click", function () {
-  var activity = $(this).attr("activity");
-=======
-
+departureDate.add(1, "days");
+departureDate = departureDate.format("YYYY-MM-DD");
 
 $(".callout").on("click", function() {
   activity = $(this).attr("js-activity");
->>>>>>> 92c3ed2bcf2ebaef00c098773c3eb796c806f984
   var cities = destinations[activity];
   document.body.innerHTML = "";
 
@@ -200,7 +197,7 @@ $(".callout").on("click", function() {
       method: "GET"
     })
       // We store all of the retrieved data inside of an object called "response"
-      .then(function (response) {
+      .then(function(response) {
         var city = response.city.name;
         var country = response.city.country;
         var list = response.list;
@@ -248,8 +245,8 @@ $(".callout").on("click", function() {
               </tr>
 
             ${Object.keys(cityWeather.day)
-            .map(function (key) {
-              return `
+              .map(key => {
+                return `
                     <table class="day-Tbl">
                       <tr class="dayTitle-tr">
                         <th class="dayTitle-td">
@@ -258,33 +255,33 @@ $(".callout").on("click", function() {
                       </tr>
 
                       ${Object.keys(cityWeather.day[key])
-                  .map(hourKey => {
-                    return `
+                        .map(hourKey => {
+                          return `
                               <tr class="hour-row">
                                 <td class="hour-td">
                                   <h3 class="hour-h3">${hourKey}</h3>
                                 </td>
                                 <td class="temp-td">
                                   <h3 class="temp-h3">${
-                      cityWeather.day[key][hourKey][0]
-                      } °C</h3>
+                                    cityWeather.day[key][hourKey][0]
+                                  } °C</h3>
                                 </td>
                                 <td class="weather-td">
                                   <h3 class="description-h3">${
-                      cityWeather.day[key][hourKey][1]
-                      }</h3>
+                                    cityWeather.day[key][hourKey][1]
+                                  }</h3>
                                 </td>
                                 <td class="icon-td">
                                   <img class="weather-icon" src="${
-                      cityWeather.day[key][hourKey][2]
-                      }">
+                                    cityWeather.day[key][hourKey][2]
+                                  }">
                                 </td>
                               </tr>`;
-                  })
-                  .join("")}
+                        })
+                        .join("")}
                     </table>`;
-            })
-            .join("")}
+              })
+              .join("")}
           </table>
         </div>
     `;
@@ -292,10 +289,24 @@ $(".callout").on("click", function() {
   });
 });
 
-$(document).on("click", ".city", function () {
+$(document).on("click", ".city", function() {
   destination = $(this).attr("city");
   if (typeof destination !== "undefined") {
-    document.body.innerHTML = "";
+    document.body.innerHTML = `
+      <h1>Choose one flight option</h1>
+      <div class="row">
+        <div class="columns">
+          <h2>Flights List
+            <img id="airplaneIcon" src="assets/images/airplaneIcon.png"></h2>
+        </div>
+      </div> 
+      <ul
+      class="accordion flights-list"
+      data-accordion="157mt1-accordion"
+      data-allow-all-closed="true"
+      role="tablist">
+      </ul>          
+    `;
     destinations[activity].forEach(element => {
       if (element.name === destination) {
         destinationCode = element.airportCode;
@@ -304,4 +315,3 @@ $(document).on("click", ".city", function () {
     trip();
   }
 });
-
