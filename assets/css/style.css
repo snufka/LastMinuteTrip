@@ -1,15 +1,70 @@
 body {
-  font-family: "Staatliches", cursive;
+  font-family: "Roboto Condensed", sans-serif;
   background-image: url("../images/background.jpg");
+}
+
+h1 {
+  font-size: 70px;
+  color: white;
+}
+
+.top-bar-left {
+  margin-left: 95px;
+}
+
+a {
+  color: rgb(3, 94, 155);
+}
+
+#beachIcon {
+  text-align: center;
+}
+
+.lead1 {
+  color: rgb(3, 94, 155);
+  font-size: 20px;
+}
+
+.lead {
+  color: rgb(3, 94, 155);
+  font-size: 35px;
+}
+
+.menu {
+  margin-right: 95px;
+}
+
+#lmtMenu {
+  background-color: rgb(250, 215, 57);
+  padding: 30px;
+  font-size: 25px;
+}
+
+.top-bar,
+.top-bar ul {
+  background-color: rgb(250, 215, 57);
+}
+
+.menu-text {
+  background-color: rgb(250, 215, 57);
+  color: rgb(3, 94, 155);
 }
 
 footer {
   display: flex;
-  background: lightgray;
+  background: rgb(250, 215, 57);
+  color: rgb(3, 94, 155);
+}
+
+.subheader1 {
+  color: rgb(3, 94, 155);
+  font-size: 33px;
 }
 
 .subheader {
-  color: black;
+  color: rgb(250, 215, 57);
+  font-size: 25px;
+  text-align: center;
 }
 
 .activity-img {
@@ -200,4 +255,3 @@ tbody th {
     flex-grow: 0;
   }
 }
-
