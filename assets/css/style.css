@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 footer {
     display: flex;
     background: lightgray;
@@ -86,3 +87,262 @@ footer {
     justify-content: space-between;
 }
 
+=======
+body {
+  font-family:'Roboto Condensed', sans-serif;
+  background-image: url("../images/background.jpg");
+}
+
+h1 {
+  font-size: 70px;
+  color: white;
+}
+
+.top-bar-left {
+  margin-left:95px;
+}
+
+a {
+  color: rgb(3, 94, 155);
+}
+
+#beachIcon {
+  text-align: center;
+}
+
+.lead1 {
+  color:rgb(3, 94, 155);
+  font-size: 20px;
+}
+
+.lead {
+  color: rgb(3, 94, 155);
+  font-size: 35px;
+}
+
+.menu {
+  margin-right:95px;
+
+}
+
+#lmtMenu {
+  background-color:rgb(250, 215, 57);
+  padding: 30px;
+  font-size: 25px;
+}
+
+.top-bar, .top-bar ul {
+  background-color: rgb(250, 215, 57);
+}
+
+.menu-text {
+  background-color: rgb(250, 215, 57);
+  color: rgb(3, 94, 155);
+}
+
+footer {
+  display: flex;
+  background: rgb(250, 215, 57);
+  color: rgb(3, 94, 155);
+}
+
+.subheader1 {
+  color: rgb(3, 94, 155);
+  font-size: 33px;
+}
+
+.subheader {
+  color: rgb(250, 215, 57);
+  font-size: 25px;
+  text-align: center;
+}
+
+.activity-img {
+  height: 220;
+  width: 100%;
+}
+
+.callout:hover {
+  background: lightskyblue;
+  cursor: pointer;
+}
+
+.city:hover * {
+  background: lightskyblue !important;
+  cursor: pointer;
+}
+
+.city {
+  border: darkblue;
+  border-style: solid;
+  margin: 1.5px;
+  width: 230px;
+  padding: 0;
+  max-width: 250px;
+  min-width: 240px;
+}
+
+.city,
+.column {
+  overflow-x: hidden !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  padding: 0;
+  justify-content: center;
+}
+
+.cityTbl-titleRow {
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #40798c;
+}
+
+.citytitle-h1 {
+  font-size: 15px;
+  font: bold;
+  color: white;
+}
+
+.cityFlag-td {
+  width: 70px;
+  height: 50px;
+}
+
+.flag {
+  flex-shrink: 1;
+  height: 100%;
+}
+
+.dayTitle-tr {
+  display: flex;
+  align-items: center;
+}
+
+.dayTitle-td {
+  width: 100%;
+}
+
+.day-tbl {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.dayTitle-h2 {
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hour-h3,
+.temp-h3,
+.description-h3 {
+  font-size: 10px;
+  margin: 2px;
+}
+
+.weather-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.city-tbl,
+.day-tbl {
+  width: 100%;
+  margin: 0;
+}
+
+.hour-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #98c1d9;
+  background: #98c1d9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #98c1d9;
+}
+
+tbody,
+tfoot,
+thead {
+  border: none;
+  background-color: papayawhip;
+}
+
+caption,
+tbody td,
+tbody th {
+  padding: 0;
+}
+
+#airplaneIcon {
+  height: 45px;
+}
+
+@media screen and (max-height: 1000px) {
+  .city {
+    height: 800px;
+    overflow: scroll;
+  }
+  .city::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .city {
+    height: 500px;
+    overflow: scroll;
+  }
+  .city::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .city {
+    height: 400px;
+    overflow: scroll;
+  }
+  .city::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .city {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-wrap: wrap;
+    flex-grow: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-wrap: wrap;
+    flex-grow: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-wrap: wrap;
+    flex-grow: 0;
+  }
+}
+>>>>>>> 52f03e356f7416201b0a3cb362e844a4e27c989b
