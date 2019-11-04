@@ -2,11 +2,6 @@ var latitude;
 var longitude;
 var accessToken;
 var airportUrl;
-<<<<<<< HEAD
-var departureDate = "2019-11-01"; //User Input OR tomorrow by default (Moment API)?;
-var returnDate = "2019-11-05"; //User Input OR tomorrow + x days by default (Moment API)? OPTIONAL;
-=======
->>>>>>> 52f03e356f7416201b0a3cb362e844a4e27c989b
 
 //first we get the latitude and longitude of the user with getLocation() and showPosition()
 function getLocation() {
@@ -26,11 +21,6 @@ function showPosition(position) {
     latitude +
     "&longitude=" +
     longitude;
-<<<<<<< HEAD
-  //Once we have the airportUrl we can call the trip() function  
-  trip();
-=======
->>>>>>> 52f03e356f7416201b0a3cb362e844a4e27c989b
 }
 
 getLocation();
@@ -69,20 +59,12 @@ function trip() {
         .then(function(data) {
           //In the variable airportIata we store the origin Airport depending on user Position
           var airportIata = data.data[0].iataCode;
-<<<<<<< HEAD
-          console.log(airportIata);
-          fetch(
-            "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=" +
-              airportIata +
-              "&destinationLocationCode=MXP&departureDate=" +
-=======
           fetch(
             "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=" +
               airportIata +
               "&destinationLocationCode=" +
               destinationCode +
               "&departureDate=" +
->>>>>>> 52f03e356f7416201b0a3cb362e844a4e27c989b
               departureDate +
               "&adults=1&nonStop=false&max=10",
             {
@@ -94,14 +76,6 @@ function trip() {
                 Authorization: "Bearer " + accessToken
               }
             }
-<<<<<<< HEAD
-          ).then(function(response) {
-            return console.log(response.json());
-          });
-        });
-    });
-}
-=======
           )
             .then(function(response) {
               return response.json();
@@ -165,4 +139,3 @@ $(document).on("click", ".bookingBtn", function() {
       </div>      
     `;
 });
->>>>>>> 52f03e356f7416201b0a3cb362e844a4e27c989b
