@@ -1,5 +1,4 @@
 var destinationCode;
-
 var departureDate = moment();
 var activity;
 var destinations = {
@@ -316,4 +315,3 @@ $(document).on("click", ".city", function() {
     trip();
   }
 });
-

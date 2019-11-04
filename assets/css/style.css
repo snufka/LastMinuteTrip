@@ -1,5 +1,5 @@
 body {
-  font-family:'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   background-image: url("../images/background.jpg");
 }
 
@@ -9,7 +9,7 @@ h1 {
 }
 
 .top-bar-left {
-  margin-left:95px;
+  margin-left: 95px;
 }
 
 a {
@@ -21,7 +21,7 @@ a {
 }
 
 .lead1 {
-  color:rgb(3, 94, 155);
+  color: rgb(3, 94, 155);
   font-size: 20px;
 }
 
@@ -31,17 +31,17 @@ a {
 }
 
 .menu {
-  margin-right:95px;
-
+  margin-right: 95px;
 }
 
 #lmtMenu {
-  background-color:rgb(250, 215, 57);
+  background-color: rgb(250, 215, 57);
   padding: 30px;
   font-size: 25px;
 }
 
-.top-bar, .top-bar ul {
+.top-bar,
+.top-bar ul {
   background-color: rgb(250, 215, 57);
 }
 
