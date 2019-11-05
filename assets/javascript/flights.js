@@ -95,6 +95,7 @@ function trip() {
                   departure.substring(0, 4);
                 var departureTime = departure.substring(11, 16);
                 var flightDiv = document.querySelector(".flights-list");
+                $(".loader").html("");
                 flightDiv.innerHTML += `
                 <li class="accordion-item" data-accordion-item="" role="presentation">
                   <a
