@@ -170,7 +170,22 @@ departureDate = departureDate.format("YYYY-MM-DD");
 $(".callout").on("click", function() {
   activity = $(this).attr("js-activity");
   var cities = destinations[activity];
-  document.body.innerHTML = "";
+  if (typeof activity !== "undefined") {
+    document.body.innerHTML = `<div class="top-bar" id="lmtMenu">
+    <div class="top-bar-left">
+    <ul class="menu accordion-menu" data-responsive-menu="accordion" role="tablist" aria-multiselectable="true" data-accordionmenu="auy4sl-accordionmenu" data-responsivemenu="g5m4ue-responsivemenu">
+      <img src="assets/images/globe.png" alt="Logo" width="80" height="80">
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="favorite.html">Favorite Destinations</a></li>
+    </ul>
+  </div>
+  </div>`;
+  }
 
   var container = document.createElement("div");
   $(container).attr("class", "container row small-up-1 medium-up-2 large-up-3");
@@ -299,7 +314,10 @@ $(document).on("click", ".city", function() {
           <h2>Flights List
             <img id="airplaneIcon" src="assets/images/airplaneIcon.png"></h2>
         </div>
-      </div> 
+      </div>
+      <div class="loader">
+        <div class="lds-roller loaderEl"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
       <ul
       class="accordion flights-list"
       data-accordion="157mt1-accordion"
