@@ -3,13 +3,21 @@ body {
   background-image: url("../images/background.jpg");
 }
 
+#allWindows {
+  height: 960px;
+}
+
 h1 {
   font-size: 70px;
   color: white;
 }
 
 .top-bar-left {
-  margin-left:95px;
+  margin-left:115px;
+}
+
+.top-bar-right {
+  margin-top: 25px;
 }
 
 a {
@@ -31,14 +39,14 @@ a {
 }
 
 .menu {
-  margin-right:95px;
+  margin-right:115px;
 
 }
 
 #lmtMenu {
   background-color:rgb(250, 215, 57);
-  padding: 30px;
   font-size: 25px;
+  padding: 10px;
 }
 
 .top-bar, .top-bar ul {
@@ -54,6 +62,7 @@ footer {
   display: flex;
   background: rgb(250, 215, 57);
   color: rgb(3, 94, 155);
+  margin-bottom: 0;
 }
 
 .subheader1 {
