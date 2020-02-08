@@ -72,7 +72,7 @@ footer {
   width: 100%;
 }
 
-.callout:hover {
+.activity:hover {
   background: lightskyblue;
   cursor: pointer;
 }
